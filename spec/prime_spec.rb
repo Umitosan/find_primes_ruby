@@ -3,11 +3,16 @@ require('rspec')
 
 describe('') do
   it("return numbers to user upto number input(n)") do
-    expect("9".prime()).to(eq([2,3,4,5,6,7,8,9]))
+    expect("3".prime()).to(eq([2,3]))
   end
-  # it("return numbers to user upto number input(n)") do
-  #   expect("9".prime()).to(eq([2,3,4,5,6,7,8,9]))
-  # end
+
+  it("any multiple of 2 will be excluded as prime()") do
+    expect("4".prime()).to(eq([2, 3, "x"]))
+  end
+
+  it("any multiple of 3 will be excluded as prime()") do
+    expect("6".prime()).to(eq([2, 3, "x",5,"x"]))
+  end
 
 
 end
