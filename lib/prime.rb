@@ -1,18 +1,29 @@
 class String
+
   define_method(:prime) do
-    numbers = []
     input = self.to_i
+    numbers = []
+    numbers2 = []
+    prime_arr = []
     (2..input).each do |n|
       numbers.push(n)
+      numbers2.push(n)
+      prime_arr.push(n)
     end
-    numbers.each() do |digit2|
-      if (((digit2 % 2) == 0) && (digit2 > 2))
-        numbers[digit2-2] = 'x'
-      end
-    end
-    numbers.each() do |digit3|
-      if (((digit3 % 3) == 0) && (digit > 2))
-    end
-    numbers
+
+    numbers.each() do |num|
+      numbers2.each() do |num2|
+        if (((num2 % num) == 0) && (num2 > num))
+            prime_arr[num2 - 2] = "x"
+        else
+          "error"
+        end
+      end # end small loop
+    end  # end main looop
+
+
+    prime_arr.delete_if {|element| element == "x"}
+
+    prime_arr
   end
 end
