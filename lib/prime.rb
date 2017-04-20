@@ -13,7 +13,7 @@ class String
 
     numbers.each() do |num| # main loop
       numbers2.each() do |num2| # inner loop
-        if (((num2 % num) == 0) && (num2 > num)) 
+        if (((num2 % num) == 0) && (num2 > num))
             prime_arr[num2 - 2] = "x"
         else
           "error"
@@ -24,6 +24,6 @@ class String
 
     prime_arr.delete_if {|element| element == "x"}
 
-    prime_arr
+    prime_arr.join(", ")
   end
 end
