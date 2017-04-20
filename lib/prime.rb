@@ -18,7 +18,7 @@ class String
         else
           "error"
         end
-      end # end small loop
+      end # end inner loop
     end  # end main looop
 
 
