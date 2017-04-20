@@ -6,14 +6,14 @@ class String
     numbers2 = []
     prime_arr = []
     (2..input).each do |n|
-      numbers.push(n)
-      numbers2.push(n)
-      prime_arr.push(n)
+      numbers.push(n) # pushing to array for main loop
+      numbers2.push(n) # pushing to array for inner loop
+      prime_arr.push(n) # pushing just the prime numbers
     end
 
-    numbers.each() do |num|
-      numbers2.each() do |num2|
-        if (((num2 % num) == 0) && (num2 > num))
+    numbers.each() do |num| # main loop
+      numbers2.each() do |num2| # inner loop
+        if (((num2 % num) == 0) && (num2 > num)) 
             prime_arr[num2 - 2] = "x"
         else
           "error"
