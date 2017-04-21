@@ -8,6 +8,6 @@ get('/') do
 end
 
 get('/prime') do
-  @prime = params.fetch('prime').prime()
+  @prime = prime(params.fetch('prime'))
   erb(:prime)
 end
