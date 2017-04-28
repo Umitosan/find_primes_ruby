@@ -7,7 +7,8 @@ get('/') do
   erb(:index)
 end
 
-get('/prime') do
-  @prime = prime(params.fetch('prime'))
+get('/prime_get') do
+  @prime_arr = prime(params.fetch('prime'))
+  @prime_sum = prime_sum(@prime_arr)
   erb(:prime)
 end
